@@ -1,0 +1,10 @@
+.intro {
+  @include tablet-l-up {
+    min-height: 720px;
+    display: flex;
+    align-items: center;
+  }
+  &-wrapper {
+    width: 50%;
+  }
+}
