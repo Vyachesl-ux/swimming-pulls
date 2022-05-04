@@ -18,3 +18,11 @@ img {
 		margin-right: auto;
 	}
 }
+ul,
+ol{
+	list-style: none;
+}
+a{
+	text-decoration: none;
+	color: $black;
+}
