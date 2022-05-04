@@ -1,0 +1,19 @@
+.btn{
+   width: 100%;
+   display: flex;
+   &-link{
+      display: block;
+      padding: 12px 45px;
+      border: 1px solid $secondary;
+      border-radius: 50px;
+      text-transform: uppercase;
+      &+&{
+         margin-left: 20px;
+      }
+      &:hover{
+         background: $links-hover;
+         transition: background .3s;
+         color: $white;
+      }
+   }
+}

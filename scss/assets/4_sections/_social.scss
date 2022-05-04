@@ -1,0 +1,10 @@
+.social{
+   margin: 150px 0 0 0;
+   &-icons{
+      &__item{
+         &+&{
+            margin-left: 20px;
+         }
+      }
+   }
+}
