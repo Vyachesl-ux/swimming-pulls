@@ -1,68 +1,64 @@
-.header {
-  min-height: 800px;
-  background: no-repeat url("/images/bg_1-01.png");
-  background-position: top;
-  background-size: contain;
-  @include medium-desktop-up {
-     background-position: center;
-    background-size: cover;
+.nav {
+  padding: 20px 0;
+  display: flex;
+  position: relative;
+
+  &-logo {
+    margin-right: 170px;
   }
-  .header-wrapper {
-    border-bottom: 1px solid rgba($color: $gray, $alpha: 0.2);
-    .nav {
-      padding: 20px 0;
+
+  &-items {
+    display: flex;
+    width: 100%;
+    align-items: center;
+
+    &__link {
+      height: 100%;
       display: flex;
-      position: relative;
-      &-logo {
-        margin-right: 170px;
+      align-items: center;
+      padding: 0 25px;
+
+      &:nth-child(n + 1) {
+        a {
+          color: $white;
+
+          &:after {
+            background: $white;
+          }
+        }
       }
 
-      &-items {
-        display: flex;
-        width: 100%;
-        align-items: center;
+      &:nth-child(1),
+      &:nth-child(2) {
+        a {
+          color: $black;
 
-        &__link {
-          height: 100%;
-          display: flex;
-          align-items: center;
-          padding: 0 25px;
-          &:nth-child(n + 1) {
-            a {
-              color: $white;
-              &:after {
-                background: $white;
-              }
-            }
+          &:after {
+            background: $black;
           }
-          &:nth-child(1),
-          &:nth-child(2) {
-            a {
-              color: $black;
-              &:after {
-                background: $black;
-              }
-            }
-            &:nth-child(2) {
-              flex-grow: 1;
-            }
-          }
-          a {
-            position: relative;
-            &:after {
-              position: absolute;
-              content: "";
-              bottom: -2px;
-              left: 0;
-              height: 2px;
-              width: 0;
-              transition: width 0.3s;
-            }
-            &:hover:after {
-              width: 100%;
-              transition: width 0.3s;
-            }
-          }
+        }
+
+        &:nth-child(2) {
+          flex-grow: 1;
+        }
+      }
+
+      a {
+        position: relative;
+
+        &:after {
+          position: absolute;
+          content: "";
+          bottom: -2px;
+          left: 0;
+          height: 2px;
+          width: 0;
+          transition: width 0.3s;
+        }
+
+        &:hover:after {
+          width: 100%;
+          transition: width 0.3s;
         }
       }
     }
