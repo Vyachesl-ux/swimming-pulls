@@ -1,0 +1,34 @@
+.benefits {
+   background: no-repeat url("assets/images/blue_bg.png");
+   background-position: center;
+   background-size: cover;
+   padding: 120px 0 363px 0;
+   *{
+      color: $white;
+   }
+   &-content{
+      &__header{
+         display: flex;
+         border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+         .benefits-content__title, .benefits-content__text{
+            width: 50%;
+         }
+      }
+      &__wrapper{
+         padding: 70px 0;
+         display: flex;
+         justify-content: center;
+         .benefits-content__item{
+            text-align: center;
+            padding: 0 100px;
+            &--num{
+               font-size: 60px;
+               margin: 0 0 10px 0;
+            }
+            &--text{
+               opacity: .7;
+            }
+         }
+      }
+   }
+}

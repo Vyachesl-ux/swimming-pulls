@@ -1,13 +1,12 @@
 .content {
-   min-height: 800px;
-   background: no-repeat url("assets/images/bg_1-01.png");
-   background-position: top;
-   background-size: contain;
-   @include medium-desktop-up {
-      background-position: center;
-     background-size: cover;
-   }
    &-wrapper {
-      border-bottom: 1px solid rgba($color: $gray, $alpha: 0.2);
+      min-height: 800px;
+      background: no-repeat url("assets/images/bg_1-02.png");
+      background-position: top;
+      background-size: contain;
+      @include medium-desktop-up {
+         background-position: center;
+        background-size: cover;
+      }
    }
 }

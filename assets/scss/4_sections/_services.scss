@@ -1,0 +1,33 @@
+.services {
+   background: $lightblue;
+
+   &-content {
+      &__item {
+         display: flex;
+
+         &-num,
+         &-wrapp,
+         &-image {
+            padding: 30px;
+         }&-num{
+            opacity: .5;
+         }
+
+         &-wrapp {
+            width: 40%;
+
+            .services-content__item-title {
+               margin: 0 0 30px 0;
+            }
+         }
+
+         &-image {
+            width: 60%;
+            img{
+               overflow: hidden;
+               border-radius: 10px;
+            }
+         }
+      }
+   }
+}

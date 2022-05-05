@@ -1,0 +1,58 @@
+.projects {
+   &-content {
+      display: flex;
+      flex-wrap: wrap;
+      padding-top: 30px;
+
+      &__item {
+         display: flex;
+         width: 100%;
+         padding: 60px;
+         position: relative;
+         &-num{
+            position: absolute;
+            content: '';
+            left: 60px;
+            font-size: 130px;
+            opacity: .25;
+            color: $white;
+            font-weight: 300;
+         }
+
+         &:nth-child(odd) {
+            width: 55%;
+            .projects-content__item-num{
+            bottom: 40px;
+            }
+         }
+
+         &:nth-child(even) {
+            width: 45%;
+            .projects-content__item-num{
+               bottom: -80px;
+            }
+            img {
+               position: absolute;
+               top: 180px;
+               max-height: 316px;
+               left: 60px;
+               bottom: 25px;
+            }
+         }
+
+         img {
+            overflow: hidden;
+            border-radius: 10px;
+         }
+         &:last-child{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            h3{
+               align-self: center;
+            }
+         }
+      }
+   }
+}
