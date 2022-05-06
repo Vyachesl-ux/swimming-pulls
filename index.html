@@ -24,9 +24,9 @@
                         <img src="assets/images/icons/logo.png" alt="">
                      </div>
                      <ul class="nav-items">
-                        <li class="nav-items__link"><a href="#">Главная</a> </li>
-                        <li class="nav-items__link"><a href="#">Услуги</a> </li>
-                        <li class="nav-items__link"><a href="#">Контакты</a> </li>
+                        <li class="nav-items__link"><a href="#services">Услуги</a> </li>
+                        <li class="nav-items__link"><a href="#projects">Проекты</a> </li>
+                        <li class="nav-items__link"><a href="#contact_us">Контакты</a> </li>
                         <li class="nav-items__link"><a href="#faq">FAQ</a> </li>
                         <li class="nav-items__link lang"><a href="#">RU</a> </li>
                      </ul>
@@ -60,7 +60,7 @@
             </div>
          </div>
       </div>
-      <section class="services">
+      <section id="services" class="services">
          <div class="container">
             <h2>Услуги</h2>
             <div class="services-content">
@@ -141,7 +141,7 @@
             </div>
          </div>
       </section>
-      <section class="projects">
+      <section id="projects" class="projects">
          <div class="container">
             <h2>Примеры реализованных проектов</h2>
             <div class="projects-content">
@@ -410,19 +410,19 @@
          </ul>
       </div>
    </section>
-   <section class="contact">
+   <section id="contact_us" class="contact">
       <div class="container">
          <div class="contact-wrapper">
             <div class="contact-content">
                <div class="contact-form">
-                  <h3>связаться с нами</h3>
-                  <p>Если вы заинтересованы, можете получить бесплатную консультацию
-                     у наших специалистов</p>
-                  <form action="#" method="post">
-                     <input type="text" placeholder="Имя">
-                     <input type="text" placeholder="Телефон">
-                     <input type="email" placeholder="Email">
-                     <textarea placeholder="Ваше сообщение..."></textarea>
+                  <form id="form" action="#" method="post" class="form__body">
+                     <h3>связаться с нами</h3>
+                     <p>Если вы заинтересованы, можете получить бесплатную консультацию
+                        у наших специалистов</p>
+                     <input type="text" name="name" placeholder="Имя" class="form__input __req">
+                     <input type="text" name="telephone" placeholder="Телефон" class="form__input __req">
+                     <input type="email" name="email" placeholder="Email" class="form__input __req __email">
+                     <textarea class="form__input" name="message" placeholder="Ваше сообщение..."></textarea>
                      <div class="btn single">
                         <input type="submit" class="btn-link color" value="отправить">
                      </div>
@@ -462,9 +462,9 @@
             <div class="main-footer__item">
                <nav class="nav">
                   <ul class="nav-items">
-                     <li class="nav-items__link"><a href="#">Главная</a> </li>
-                     <li class="nav-items__link"><a href="#">Услуги</a> </li>
-                     <li class="nav-items__link"><a href="#">Контакты</a> </li>
+                     <li class="nav-items__link"><a href="#services">Услуги</a> </li>
+                     <li class="nav-items__link"><a href="#projects">Проекты</a> </li>
+                     <li class="nav-items__link"><a href="#contact_us">Контакты</a> </li>
                      <li class="nav-items__link"><a href="#faq">FAQ</a> </li>
                   </ul>
                </nav>
@@ -475,14 +475,22 @@
                <a href="#"><img class="main-footer__item--social" src="assets/images/icons/Instagram.svg"
                      alt="instagram"></a>
                <a href="#"><img class="main-footer__item--social" src="assets/images/icons/Viber.svg" alt="viber"></a>
-               <a href="#"><img class="main-footer__item--social" src="assets/images/icons/WhatsApp.svg" alt="whatsapp></a>
+               <a href="#"><img class="main-footer__item--social" src="assets/images/icons/WhatsApp.svg"
+                     alt="whatsapp"></a>
             </div>
          </div>
       </div>
+      <div class="footer-footer">
+         <div class="container">
+            <div>Copyright © 2021. Все права защищены.</div>
+         </div>
+      </div>
    </footer>
+
    </div>
    <script src=" assets/js/app.js"></script>
-                  <script src="assets/js/faq-accordion.js"></script>
+   <script src="assets/js/faq-accordion.js"></script>
+   <script src="assets/js/contact-form.js"></script>
 </body>
 
 </html>
