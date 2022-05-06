@@ -1,105 +1,108 @@
-.btn{
-   width: 100%;
-   display: flex;
-   transition: .2s;
+.btn {
+  width: 100%;
+  display: flex;
+  transition: 0.2s;
 
-   &-link{
-      display: block;
-      padding: 12px 45px;
-      border: 1px solid $secondary;
-      border-radius: 50px;
-      text-transform: uppercase;
-      &+&{
-         margin-left: 20px;
+  &-link {
+    display: block;
+    padding: 12px 45px;
+    border: 1px solid $secondary;
+    border-radius: 50px;
+    text-transform: uppercase;
+    width: 100%;
+    margin-bottom: 0;
+    cursor: pointer;
+    & + & {
+      margin-left: 20px;
+    }
+    &:hover {
+      background: $links-hover;
+      transition: background 0.3s;
+      color: $white;
+    }
+  }
+  &.single {
+    justify-content: center;
+    align-items: center;
+  }
+  &.symbol {
+    align-items: center;
+    background-color: $white;
+    border: 2px solid $secondary;
+    border-radius: 50%;
+    display: flex;
+    font-size: 40px;
+    height: 48px;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+    vertical-align: middle;
+    width: 48px;
+
+    &:not(.no-click) {
+      &:hover {
+        @extend %symbol-btn-hover;
       }
-      &:hover{
-         background: $links-hover;
-         transition: background .3s;
-         color: $white;
-      }
-   }
-   &.single{
-      justify-content: center;
-   }
-   &.symbol {
-      align-items: center;
-      background-color: $white;
-      border: 2px solid $secondary;
-      border-radius: 50%;
-      display: flex;
-      font-size: 40px;
-      height: 48px;
-      justify-content: center;
-      padding: 0;
-      position: relative;
-      vertical-align: middle;
-      width: 48px;
+    }
 
-      &:not(.no-click) {
-          &:hover {
-              @extend %symbol-btn-hover;
-          }
+    &.no-click {
+      cursor: initial;
+    }
+
+    &.active {
+      @extend %symbol-btn-active;
+    }
+
+    &.plus {
+      &::before {
+        background: $secondary;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 24px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 3px;
       }
 
-      &.no-click {
-          cursor: initial;
+      &::after {
+        background: $secondary;
+        border-radius: 8px;
+        content: "";
+        display: block;
+        height: 3px;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
       }
 
-      &.active {
-          @extend %symbol-btn-active;
+      &:hover {
+        &::after,
+        &::before {
+          border-color: $secondary;
+        }
       }
-
-
-      &.plus {
-          &::before {
-              background: $secondary;
-              border-radius: 8px;
-              content: "";
-              display: block;
-              height: 24px;
-              left: 50%;
-              position: absolute;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 3px;
-          }
-
-          &::after {
-              background: $secondary;
-              border-radius: 8px;
-              content: "";
-              display: block;
-              height: 3px;
-              left: 50%;
-              position: absolute;
-              top: 50%;
-              transform: translate(-50%, -50%);
-              width: 24px;
-          }
-
-          &:hover {
-              &::after,
-              &::before {
-                  border-color: $secondary;
-              }
-          }
-          &:hover{
-             &::after,
-             &::before{
-                background: $white !important;
-             }
-          }
+      &:hover {
+        &::after,
+        &::before {
+          background: $white !important;
+        }
       }
+    }
   }
 }
 %symbol-btn-hover {
-   background-color: $secondary;
+  background-color: $secondary;
 
-   &::after,
-   &::before {
-       background: $white;
-   }
+  &::after,
+  &::before {
+    background: $white;
+  }
 }
 %symbol-btn-active {
-   background-color: $white;
+  background-color: $white;
 }
