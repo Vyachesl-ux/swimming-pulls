@@ -1,0 +1,23 @@
+.main-footer {
+  padding: 40px 0;
+  background: $black;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a {
+      color: $white !important;
+      &:after {
+        background: $white !important;
+      }
+    }
+    .main-footer__item {
+      &--social {
+        filter: invert(1);
+      }
+      a + a {
+        margin-left: 10px;
+      }
+    }
+  }
+}
