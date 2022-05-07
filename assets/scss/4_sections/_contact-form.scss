@@ -10,10 +10,11 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba($primary, 0.3) url("assets/images/gif/giphy.gif") center /
-      50px no-repeat;
+    background: rgba($lightblue, 0.7) url("assets/images/gif/loader_map.gif") center /
+      100px no-repeat;
     opacity: 0;
     visibility: hidden;
+    transition: all .3s ease 0s;
   }
   &._sending::after {
     opacity: 1;

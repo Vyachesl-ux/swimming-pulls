@@ -12,17 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (error === 0) {
       form.classList.add("_sending");
-      let response = await fetch("sendmail.php", {
+      let responce = await fetch("sendmail.php", {
         method: "POST",
         body: formData,
       });
-      if (response.ok) {
-        let result = await response.json();
+      if (responce.ok) {
+        let result = await responce.json();
         alert(result.message);
         form.Preview.innerHTML = "";
         form.reset();
+        form.classList.remove("_sending");
       } else {
         alert("Ошибка отправки формы");
+        form.classList.remove("_sending");
       }
     } else {
       alert("Заполните обязательные поля в форме");
