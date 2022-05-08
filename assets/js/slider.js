@@ -1,5 +1,6 @@
 /* MODAL
                     ===============*/
+                    
 $(function () {
   $('[data-slider="slick"]').slick({
     infinite: true,
