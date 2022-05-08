@@ -10,6 +10,7 @@
    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="style.css">
    <link rel="icon" type="image/png" href="assets/images/icons/logo_32_32.png">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
    <title>Строительство бассейнов</title>
 </head>
 
@@ -141,12 +142,15 @@
             </div>
          </div>
       </section>
+
+      <!-- Projects -->
+
       <section id="projects" class="projects">
          <div class="container">
             <h2>Примеры реализованных проектов</h2>
             <div class="projects-content">
                <div class="projects-content__item">
-                  <div class="projects-content__item-image">
+                  <div class="projects-content__item-image" data-modal="#modal_project_1">
                      <img src="assets/images/projects/01.jpg" alt="">
                      <div class="projects-content__item-image--info">
                         <h4 class="projects-content__item-image--info-header">сезонный бассейн</h4>
@@ -496,6 +500,55 @@
          </div>
       </div>
    </section>
+   <!-- modal -->
+   <div class="modal" id="modal_project_1">
+      <div class="modal__dialog">
+         <div class="modal-work">
+            <button class="modal__close" type="button" data-close></button>
+            <div class="modal-work__preview">
+               <div data-slider="slick">
+                  <div> <img src="assets/images/slider/1/IMG_20210903_134901.jpg" alt="" class="modal-work__photo">
+                  </div>
+                  <div> <img src="assets/images/slider/1/IMG_20210903_134915.jpg" alt="" class="modal-work__photo">
+                  </div>
+                  <div> <img src="assets/images/slider/1/IMG_20210909_143904.jpg" alt="" class="modal-work__photo">
+                  </div>
+                  <div> <img src="assets/images/slider/1/IMG_20210917_171339.jpg" alt="" class="modal-work__photo">
+                  </div>
+               </div>
+            </div>
+            <div class="modal-work__content">
+               <div class="modal-work__header">
+                  <h3 class="modal-work__title">the weather forecast</h3>
+                  <div class="modal-work__info">app | 2021</div>
+               </div>
+               <div class="modal-work__client">
+                  <div>client:</div>
+                  <div>nett course</div>
+               </div>
+               <div class="modal-work__text">
+                  <p> This is the project within the JavaScript2.0 course. The goal of the project is to learn how to
+                     use API. As an example was used <a href="https://www.openweathermap.org/">Openweathermap</a> free
+                     source for getting array with huge weather data. In addition, the main purpose of the project is to
+                     work with different types of arrays and know how to use data from the array and implement the data
+                     in to the web directly.
+                  </p>
+                  <div class="vip__batut-project">
+                     <h4>Link to the project is here:</h4>
+                     <a href="https://vyachesl-ux.github.io/The-weather-forecast/" target="_blank">the weather
+                        forecast</a>
+                  </div>
+
+
+               </div>
+               <div class="modal-work__footer">
+                  <button type="button" class="slickPrev">previous</button>
+                  <button type="button" class="slickNext">next</button>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
    <footer class="main-footer">
       <div class="container">
          <div class="main-footer__wrapper">
@@ -534,6 +587,9 @@
    <script src=" assets/js/app.js"></script>
    <script src="assets/js/faq-accordion.js"></script>
    <script src="assets/js/contact-form.js"></script>
+   <script src="assets/js/node_modules/slick-carousel/slick/slick.min.js"></script>
+   <script src="assets/js/slider.js"></script>
+   <script src="assets/js/modal.js"></script>
 </body>
 
 </html>

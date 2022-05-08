@@ -1,0 +1,313 @@
+// main: ../style.less
+.modal-work {
+  display: flex;
+  width: 100%;
+  @include tablet-v {
+    position: relative;
+  }
+  @include phone-only {
+    flex-direction: column;
+  }
+}
+
+.modal-work__preview {
+  width: 65%;
+  position: relative;
+  overflow: hidden;
+  @include phone-only {
+    width: 50%;
+  }
+  @include phone-only {
+    width: 100%;
+    height: 45%;
+  }
+  .modal-work__photo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate3d(-50%, -50%, 0);
+    @include phone-only {
+      top: 164%;
+    }
+    @include phone-only {
+      top: 140%;
+      width: 312px;
+      max-height: 500px;
+    }
+    @include phone-only {
+      width: 355px;
+    }
+  }
+}
+.modal-work__content {
+  width: 35%;
+  padding: 1.87rem;
+  @include phone-only {
+    width: 50%;
+    padding: 1rem;
+  }
+  @include phone-only {
+    position: relative;
+    width: 100%;
+    height: 55%;
+  }
+  .modal-work__header {
+    @include phone-only {
+      position: relative;
+      width: 93%;
+    }
+    .modal-work__title {
+      @include phone-only {
+        position: absolute;
+        top: 0;
+        left: -115%;
+        margin-top: 0;
+        font-size: 1.5rem;
+        // padding-right: 10px;
+        border-right: 1px solid $black;
+      }
+      @include phone-only {
+        font-size: 1.2rem;
+      }
+      @include phone-only {
+        font-size: 1rem;
+      }
+      @include phone-only {
+        position: initial;
+        border: none;
+      }
+      @include phone-only {
+        font-size: 1.3rem;
+      }
+      @include phone-only {
+        font-size: 1.1rem;
+      }
+    }
+  }
+  .modal-work__client {
+    @include phone-only {
+      display: flex;
+      justify-content: space-around;
+      position: absolute;
+      top: 63px;
+      left: 150px;
+      width: 50%;
+      height: 50%;
+    }
+    @include phone-only {
+      left: 130px;
+    }
+  }
+  .modal-work__title {
+    font-weight: 700;
+    font-size: 2.29rem;
+    text-transform: uppercase;
+    line-height: 2.8rem;
+    margin-top: 1.87rem;
+    @include phone-only {
+      width: 111%;
+    }
+  }
+  .modal-work__info {
+    text-transform: uppercase;
+    font-size: 1.29rem;
+    line-height: 2.8rem;
+    font-weight: 400;
+    @include phone-only {
+      // padding-top: 10px;
+      font-size: 1rem;
+    }
+    @include phone-only {
+      font-size: 0.9rem;
+    }
+    @include phone-only {
+      width: 50%;
+    }
+  }
+}
+.modal-work__client {
+  @include phone-only {
+  }
+}
+.modal-work__client div:first-child {
+  text-transform: capitalize;
+  font-weight: 700;
+  font-size: 1.29rem;
+  margin-top: 2.36rem;
+  @include phone-only {
+    margin-top: 0;
+    font-size: 1rem;
+  }
+}
+.modal-work__client div:last-child {
+  text-transform: capitalize;
+  font-weight: 400;
+  line-height: 1.57rem;
+  color: $gray;
+  @include phone-only {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+  @include phone-only {
+    font-size: 0.7rem;
+  }
+}
+.modal-work__text {
+  font-weight: 300;
+  font-size: 0.86rem;
+  color: $gray;
+  line-height: 1.7rem;
+  // padding: 2.36rem 7rem 8.3rem 0;
+  padding: 2.36rem 0;
+
+  @include phone-only {
+    font-size: 0.8em;
+    line-height: 1.65;
+  }
+}
+.modal-work__footer {
+  display: flex;
+  justify-content: space-between;
+  button {
+    position: relative;
+    background-color: $white;
+    border: none;
+    text-transform: uppercase;
+
+    &:first-child:after,
+    &:last-child:after {
+      position: absolute;
+      content: "";
+      border-top: 1px solid $black;
+      border-right: 1px solid $black;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      @include phone-only {
+        border-top: 3px solid $white;
+        border-right: 3px solid $white;
+        width: 25px;
+        height: 25px;
+      }
+    }
+    &:first-child:after {
+      left: -10px;
+      transform: translateY(-50%) rotate(250grad);
+      @include phone-only {
+        left: -150px;
+      }
+      @include phone-only {
+        left: -140px;
+      }
+      @include phone-only {
+        left: -110px;
+      }
+      @include phone-only {
+        left: -165px;
+      }
+      @include phone-only {
+        left: -150px;
+      }
+      @include phone-only {
+        left: -125px;
+      }
+    }
+    &:last-child:after {
+      right: -10px;
+      transform: translateY(-50%) rotate(50grad);
+      @include phone-only {
+        right: -150px;
+      }
+      @include phone-only {
+        right: -140px;
+      }
+      @include phone-only {
+        right: -110px;
+      }
+      @include phone-only {
+        right: -165px;
+      }
+      @include phone-only {
+        right: -150px;
+      }
+      @include phone-only {
+        right: -125px;
+      }
+    }
+  }
+}
+
+.modal__content {
+  width: 100%;
+  margin-bottom: 4rem;
+  @include desktop-up {
+    margin-bottom: 0;
+  }
+  .modal__title {
+    margin: 5.7rem auto 3.79rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 3.2rem;
+    @include phone-only {
+      font-size: 2rem;
+    }
+    &--left {
+      text-align: left;
+      margin: 0;
+    }
+  }
+  .text-center {
+    @include phone-only {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  .modal__subtitle {
+    text-transform: uppercase;
+    font-size: 1.14rem;
+    line-height: 3rem;
+    color: $black;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  content: "";
+  width: 34px;
+  height: 34px;
+  background-color: $black;
+  border-radius: 50%;
+  right: 0.8rem;
+  top: 0.8rem;
+  z-index: 10000;
+  &:before,
+  &:after {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 4px;
+    background: #fff;
+    top: 50%;
+    left: 50%;
+    transition: 0.2s linear;
+    transform-origin: center;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45grad);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(350grad);
+  }
+  &:hover:before {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(-45grad);
+  }
+  &:hover:after {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(450grad);
+  }
+}

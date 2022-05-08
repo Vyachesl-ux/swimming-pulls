@@ -5,6 +5,9 @@ body {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.02em;
+  &.no-scroll {
+    overflow: hidden;
+  }
 }
 
 .container {
@@ -13,7 +16,7 @@ body {
   margin: 0 auto;
   padding: 0 $mobile-padding;
 }
-section{
+section {
   padding: 120px 0 120px 0;
 }
 
