@@ -1,35 +1,33 @@
-$(function () {
-  const modalCall = $(".projects-content__item-image--info-description");
-  const modalClose = $("[data-close]");
-  modalCall.on("click", function (event) {
-    event.preventDefault();
-    let modalId = $(".modal");
-    $(modalId).addClass("show");
-    $("body").addClass("no-scroll");
-    setTimeout(function () {
-      $(modalId).find(".modal__dialog").css({
-        transform: "rotateX(0)",
+const modalCall = document.querySelectorAll('.projects-content__item-image--info-description');
+const modalClose = document.querySelectorAll('.modal__close');
+const modalId = document.querySelectorAll('.modal');
+modalCall.forEach(e => {
+   e.addEventListener('click', (event) => {
+      event.preventDefault();
+      let attr = e.getAttribute('data-modal');
+      modalId.forEach(i => {
+         if (attr === i.getAttribute('id')) {
+            i.classList.add('show');
+            document.body.classList.add('no-scroll');
+         }
+         setTimeout(() => {
+            i.querySelector('.modal__dialog').style.transform = "rotateX(0)";
+         }, 200);
       });
-    }, 200);
-    $("#worksSlide").slick("setPosition");
-  });
-  modalClose.on("click", function (event) {
-    event.preventDefault();
-    let $this = $(this);
-    let modalParent = $this.parents(".modal");
-    modalParent.find(".modal__dialog").css({
-      transform: "rotateX(90deg)",
-    });
-    setTimeout(function () {
-      modalParent.removeClass("show");
-      $("body").removeClass("no-scroll");
-    }, 200);
-  });
-  $(".modal").on("click", function (event) {
-    $(this).removeClass("show");
-    $("body").removeClass("no-scroll");
-  });
-  $(".modal__dialog").on("click", function (event) {
-    event.stopPropagation();
-  });
-});
+
+   })
+})
+modalClose.forEach(e => {
+   e.addEventListener('click', (event) => {
+      event.preventDefault();
+      modalId.forEach(item => {
+         item.querySelector('.modal__dialog').style.transform = "rotateX(90deg)";
+         if (item.classList.contains('show')) {
+            setTimeout(() => {
+               item.classList.remove('show');
+               document.body.classList.remove('no-scroll');
+            }, 200);
+         }
+      })
+   });
+})
