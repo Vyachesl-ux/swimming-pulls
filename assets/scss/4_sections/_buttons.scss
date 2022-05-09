@@ -9,8 +9,9 @@
     border: 1px solid $secondary;
     border-radius: 50px;
     text-transform: uppercase;
-    width: 100%;
+    width: auto;
     margin-bottom: 0;
+    text-align: center;
     cursor: pointer;
     & + & {
       margin-left: 20px;

@@ -3,8 +3,8 @@
   display: flex;
   width: 100%;
   padding: 20px;
-  @include desktop-up{
-     min-height: 497px;
+  @include desktop-up {
+    min-height: 497px;
   }
   @include tablet-v {
     position: relative;
@@ -33,11 +33,10 @@
   margin: 0 0 0 20px;
   padding: 20px;
   position: relative;
-  &-wrapper{
-     @include tablet-h{
-        height: 86%;
-
-     }
+  &-wrapper {
+    @include tablet-h {
+      height: 86%;
+    }
   }
   &-item {
     display: flex;
@@ -47,10 +46,10 @@
     p {
       margin-bottom: 0;
       padding: 10px 0;
-      &:nth-child(1){
-        color: rgba($black, .7);
+      &:nth-child(1) {
+        color: rgba($black, 0.7);
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         text-align: right;
         font-weight: 500;
       }
@@ -71,7 +70,6 @@
       width: 93%;
     }
   }
-
 }
 .modal-work__footer {
   display: flex;
@@ -153,9 +151,9 @@
     transform: translate(-50%, -50%) rotate(450grad);
   }
 }
-.swiper-pagination-fraction{
+.swiper-pagination-fraction {
   width: auto;
   left: 20px;
   font-size: 40px;
-  color: rgba($black, .5);
+  color: $black;
 }

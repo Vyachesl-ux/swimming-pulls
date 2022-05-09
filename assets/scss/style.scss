@@ -1,15 +1,20 @@
 @import "0_general/colors";
 @import "0_general/global";
+
 @import "1_settings/box-sizing";
 @import "1_settings/normalize";
 @import "1_settings/reset";
+
 @import "2_tools/mixins";
+
 @import "3_base/elements";
 @import "3_base/headings";
 @import "3_base/page";
+
 @import "4_sections/content";
 @import "4_sections/header";
 @import "4_sections/navigation";
+@import "4_sections/navigation-mobile";
 @import "4_sections/intro";
 @import "4_sections/buttons";
 @import "4_sections/helpers";
@@ -21,7 +26,6 @@
 @import "4_sections/contact";
 @import "4_sections/contact-form";
 @import "4_sections/footer";
+
 @import "5_modal/modal";
 @import "5_modal/modal-work";
-@import "6_vendor/slick";
-@import "6_vendor/slick-theme";

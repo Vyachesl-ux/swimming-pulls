@@ -2,10 +2,6 @@
   const swiper = new Swiper(".swiper", {
     // Optional parameters
     loop: true,
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
-    },
     pagination: {
       el: ".swiper-pagination",
       type: "fraction",
@@ -20,6 +16,10 @@
           '"></span>'
         );
       },
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
     },
   });
 })();
