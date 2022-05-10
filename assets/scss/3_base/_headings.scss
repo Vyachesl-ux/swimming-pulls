@@ -28,9 +28,15 @@ h2, h3, h4{
 }
 h2{
    font-size: 35px;
+	@include phone-only{
+		font-size: 25px;
+	}
 }
 h3{
    font-size: 30px;
+	@include phone-only{
+		font-size: 22px;
+	}
 }
 h4{
    font-size: 20px;

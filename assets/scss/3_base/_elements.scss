@@ -10,13 +10,27 @@
 
 img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
+  max-width: 768px;
 
   &.aligncenter {
     display: block;
     margin-left: auto;
     margin-right: auto;
   }
+}
+.social-icons__item{
+  img{
+    width: auto;
+  }
+}
+.contact-item__social{
+  img{
+    width: auto;
+  }
+}
+.main-footer__item--social{
+  width: auto;
 }
 ul,
 ol {

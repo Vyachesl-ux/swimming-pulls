@@ -5,6 +5,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @include phone-only{
+      .nav{
+        display: none;
+      }
+    }
     a {
       color: $white !important;
       &:after {

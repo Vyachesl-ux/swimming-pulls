@@ -8,5 +8,16 @@
          background-position: center;
         background-size: cover;
       }
+      @include phone-only{
+         min-height: 200px;
+         max-height: 400px;
+         background-size: cover;
+         background-position: right;
+      }
+   }
+   .social{
+      @include phone-only{
+         display:  none;
+      }
    }
 }

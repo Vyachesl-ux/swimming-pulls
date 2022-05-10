@@ -1,96 +1,114 @@
-.hamburger-menu {
-  @include tablet-v {
-    position: fixed;
-    display: block;
-    background: rgba(141, 141, 142, 0.5);
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    top: 20px;
-    right: 14px;
+.site-header{
+  &__wrapper{
+    .nav{
+      .hamburger-menu{
+        display: flex;
+        align-items: center;
+        width: 100%;
+      }
+      @include tablet-v {
+        
+        .hamburger-menu {
+          position: fixed;
+          display: block;
+          background: rgba($white, .7);
+          width: 50px;
+          height: 50px;
+          border-radius: 10px;
+          top: 8px;
+          right: 38px;
+        }
+        .menu__btn {
+          display: flex;
+          align-items: center; 
+          position: fixed;
+          top: 20px;
+          right: 50px;
+          width: 26px;
+          height: 26px;
+          cursor: pointer;
+          z-index: 10001;
+        }
+        .menu__btn > span,
+        .menu__btn > span::before,
+        .menu__btn > span::after {
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          background-color: $black;
+        }
+        .menu__btn > span::before {
+          content: "";
+          top: -8px;
+        }
+        .menu__btn > span::after {
+          content: "";
+          top: 8px;
+        }
+        .nav-items {
+          display: block !important;
+          position: fixed;
+          visibility: hidden;
+          top: 0;
+          left: 100%;
+          width: 200px;
+          margin: 0;
+          padding: 50px 0;
+          background: $gray;
+          box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
+          z-index: auto;
+        }
+        
+        .nav-items__link {
+          display: block;
+          padding: 16px 50px;
+          text-align: right;
+          a{
+            color: $black !important;
+            
+        }
+        }
+        .nav-items__link:hover {
+          background-color: #cfd8dc;
+        }
+        #menu__toggle:checked ~ .menu__btn > span {
+          transform: rotate(45deg);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::before {
+          top: 0;
+          transform: rotate(0);
+        }
+        #menu__toggle:checked ~ .menu__btn > span::after {
+          top: 0;
+          transform: rotate(90deg);
+        }
+        #menu__toggle:checked ~ .nav-items {
+          visibility: visible;
+          left: calc( 100% - 200px);
+        }
+        .menu__btn > span,
+        .menu__btn > span::before,
+        .menu__btn > span::after {
+          transition-duration: 0.25s;
+        }
+        .nav-items {
+          transition-duration: 0.25s;
+        }
+        .nav-items__link {
+          transition-duration: 0.25s;
+        }
+      }
+
+    }
   }
 }
-
+.hidden-menu-item{
+  display: none;
+  @include tablet-v{
+    display: block;
+  }
+}
 #menu__toggle {
   opacity: 0;
-}
-.menu__btn {
-  display: flex; /* используем flex для центрирования содержимого */
-  align-items: center; /* центрируем содержимое кнопки */
-  position: fixed;
-  top: 15px;
-  right: 21px;
-  width: 26px;
-  height: 26px;
-  cursor: pointer;
-  z-index: 10001;
-}
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  display: block;
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background-color: $black;
-}
-.menu__btn > span::before {
-  content: "";
-  top: -8px;
-}
-.menu__btn > span::after {
-  content: "";
-  top: 8px;
-}
-.menu__box {
-  display: block;
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: 100%;
-  width: 300px;
-  height: 100%;
-  margin: 0;
-  padding: 80px 0;
-  list-style: none;
-  text-align: center;
-  background: linear-gradient(to bottom, #eceff1, rgba(236, 239, 241, 0.9));
-  box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
-  z-index: 10000;
-}
-/* элементы меню */
-.menu__item {
-  display: block;
-  padding: 16px 30px;
-  text-align: left;
-//   border-bottom: 1px solid $white;
-}
-.menu__item:hover {
-  background-color: #cfd8dc;
-}
-#menu__toggle:checked ~ .menu__btn > span {
-  transform: rotate(45deg);
-}
-#menu__toggle:checked ~ .menu__btn > span::before {
-  top: 0;
-  transform: rotate(0);
-}
-#menu__toggle:checked ~ .menu__btn > span::after {
-  top: 0;
-  transform: rotate(90deg);
-}
-#menu__toggle:checked ~ .menu__box {
-  visibility: visible;
-  left: 28%;
-}
-.menu__btn > span,
-.menu__btn > span::before,
-.menu__btn > span::after {
-  transition-duration: 0.25s;
-}
-.menu__box {
-  transition-duration: 0.25s;
-}
-.menu__item {
-  transition-duration: 0.25s;
 }

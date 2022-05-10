@@ -9,5 +9,11 @@
     p {
       width: 60%;
     }
+    @include phone-only{
+      width: 100%;
+      p{
+        width: 100%;
+      }
+    }
   }
 }

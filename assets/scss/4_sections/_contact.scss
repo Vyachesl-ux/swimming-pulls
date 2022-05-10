@@ -13,6 +13,18 @@
     right: -25%;
     transform: translateY(-50%);
     z-index: 1;
+    @include tablet-v{
+      width: 150vw;
+      height: 100vw;
+      border-radius: 100%;
+      bottom: -50%;
+      left: 50%;
+      transform: translate(-50% , 5%);
+    }
+    @include phone-only{
+      width: 170vw;
+      height: 170vw;
+    }
   }
   &-content {
     position: relative;
@@ -23,6 +35,25 @@
     .contact-item {
       width: 40%;
       text-align: center;
+    }
+    @include tablet-v{
+      flex-direction: column;
+      justify-content: center;
+      .contact-form,
+      .contact-item{
+        align-self: center;
+        width: 50%;
+      }
+      .contact-item{
+        margin-top: 100px;
+      }
+    }
+    @include phone-only{
+      .contact-form,
+      .contact-item{
+        width: 100%;
+
+      }
     }
     .contact-item {
       background: $white;
