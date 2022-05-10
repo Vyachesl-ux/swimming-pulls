@@ -1,17 +1,16 @@
-.site-header{
-  &__wrapper{
-    .nav{
-      .hamburger-menu{
+.site-header {
+  &__wrapper {
+    .nav {
+      .hamburger-menu {
         display: flex;
         align-items: center;
         width: 100%;
       }
       @include tablet-v {
-        
         .hamburger-menu {
           position: fixed;
           display: block;
-          background: rgba($white, .7);
+          background: rgba($white, 0.7);
           width: 50px;
           height: 50px;
           border-radius: 10px;
@@ -20,7 +19,7 @@
         }
         .menu__btn {
           display: flex;
-          align-items: center; 
+          align-items: center;
           position: fixed;
           top: 20px;
           right: 50px;
@@ -59,15 +58,14 @@
           box-shadow: 1px 0px 6px rgba(0, 0, 0, 0.2);
           z-index: auto;
         }
-        
+
         .nav-items__link {
           display: block;
           padding: 16px 50px;
           text-align: right;
-          a{
+          a {
             color: $black !important;
-            
-        }
+          }
         }
         .nav-items__link:hover {
           background-color: #cfd8dc;
@@ -85,7 +83,7 @@
         }
         #menu__toggle:checked ~ .nav-items {
           visibility: visible;
-          left: calc( 100% - 200px);
+          left: calc(100% - 200px);
         }
         .menu__btn > span,
         .menu__btn > span::before,
@@ -99,13 +97,12 @@
           transition-duration: 0.25s;
         }
       }
-
     }
   }
 }
-.hidden-menu-item{
+.hidden-menu-item {
   display: none;
-  @include tablet-v{
+  @include tablet-v {
     display: block;
   }
 }

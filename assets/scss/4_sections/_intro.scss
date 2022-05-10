@@ -9,9 +9,11 @@
     p {
       width: 60%;
     }
-    @include phone-only{
+    @include phone-only {
       width: 100%;
-      p{
+      position: relative;
+      top: 300px;
+      p {
         width: 100%;
       }
     }
