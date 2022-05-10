@@ -22,6 +22,10 @@ h1{
    font-weight: 300;
 	color: $primary;
 	margin-bottom: 20px;
+	@include phone-only{
+		font-size: 28px;
+		text-align: center;
+	}
 }
 h2, h3, h4{
    font-weight: 400;
