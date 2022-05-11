@@ -12,11 +12,11 @@ img {
   height: auto;
   width: 100%;
   max-width: 768px;
-
-  &.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+  @include tablet-v{
+    max-height: 390px;
+  }
+  @include phone-only{
+    max-height: 225px;
   }
 }
 .social-icons__item{

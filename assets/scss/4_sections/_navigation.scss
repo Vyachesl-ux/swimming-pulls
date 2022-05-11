@@ -3,8 +3,18 @@
   display: flex;
   position: relative;
   z-index: 90;
+  @include phone-only{
+    padding: 10px 0;
+  }
+
   &-logo {
     margin-right: 170px;
+    @include phone-only{
+      margin-right: 0;
+      background: rgba($white, .5);
+      padding: 10px;
+      border-radius: 10px;
+    }
   }
 
   &-items {
@@ -24,6 +34,9 @@
 
           &:after {
             background: $white;
+            @include tablet-v{
+              background: $black;
+            }
           }
         }
       }
@@ -57,7 +70,7 @@
           transition: width 0.3s;
         }
 
-        &:hover:after {
+        &:last-child:hover:after {
           width: 100%;
           transition: width 0.3s;
         }

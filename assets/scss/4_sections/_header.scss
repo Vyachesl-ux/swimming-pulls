@@ -1,6 +1,9 @@
 .site-header{
    &__wrapper{
       border-bottom: 1px solid rgba($color: $black, $alpha: 0.2);
+      @include phone-only{
+         border-bottom: 1px solid $white;
+      }
    }
 }
 

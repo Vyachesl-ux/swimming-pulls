@@ -58,7 +58,7 @@
 
         }
         @include tablet-v {
-          max-height: 195px;
+          max-height: 190px;
         }
 
         &.show {
@@ -70,7 +70,7 @@
           bottom: 0;
           right: 0;
           background: $lightblue;
-          padding: 0 30px 4px 16px;
+          padding: 0 30px 0 16px;
           font-weight: 600;
           cursor: pointer;
         }

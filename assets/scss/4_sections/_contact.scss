@@ -13,6 +13,11 @@
     right: -25%;
     transform: translateY(-50%);
     z-index: 1;
+    @include tablet{
+      width: 60vw;
+      height: 80vw;
+
+    }
     @include tablet-v{
       width: 150vw;
       height: 100vw;
@@ -96,6 +101,9 @@
         }
       }
       &__email {
+        @include phone-only{
+          margin: 0;
+        }
         & {
           a {
             &:nth-child(1) {
@@ -105,6 +113,9 @@
         }
       }
       &__social{
+        @include phone-only{
+          margin: 20px 0 0 0;
+        }
          a+a{
             margin-left: 20px;
          }
