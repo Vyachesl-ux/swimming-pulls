@@ -110,6 +110,39 @@ console.log(btn);
    document.querySelectorAll('.projects-content__item-image--info-description').forEach( e => {
       e.innerHTML = detailed['title'][hash]
    });
+   document.querySelector('.projects-header').innerHTML = projects_header["title"][hash];
+   document.querySelector('.projects-text').innerHTML = projects_text["title"][hash];
+   
+   // benefits
+   
+   document.querySelector('.benefits-content__title').innerHTML = benefits_content_title["title"][hash];
+   document.querySelector('.benefits-content__text').innerHTML = benefits_content_text["title"][hash];
+   
+   let benefitsItemText = benefits_item_text[hash];
+   document.querySelectorAll('.benefits-content__item--text').forEach(e => {
+      let value = e.innerHTML;
+      if(value in benefitsItemText){
+         e.innerHTML = benefitsItemText[value];
+      }
+   })
+   
+   // faq
+   
+   document.querySelector('.faq-title').innerHTML = faq_title["title"][hash];
+   
+   let faqHeading = faq_accord_heading[hash];
+    document.querySelectorAll('.faq-accordion__heading').forEach(e => {
+      let value = e.innerHTML;
+      if(value in faqHeading){
+         e.innerHTML = faqHeading[value];
+      }
+   })
 
-
+   let faqContentP = faq_content_p[hash];
+   document.querySelectorAll('.faq-text').forEach(e => {
+      let value = e.innerHTML;
+      if(value in faqContentP){
+         e.innerHTML = faqContentP[value]
+      }
+   })
 })();
