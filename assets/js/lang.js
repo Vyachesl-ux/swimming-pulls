@@ -82,6 +82,7 @@ console.log(btn);
    // service content
 
    let serviceContent = service_content[hash];
+   let serviceReadMore = document.querySelectorAll('.services-read-more');
    console.log(serviceContent);
    document.querySelectorAll('.services-content__item-text').forEach( e=> {
       let value = e.innerHTML;
@@ -90,6 +91,8 @@ console.log(btn);
          e.innerHTML = serviceContent[value];
       }
    })
+
+   
 
    // projects
    document.querySelector('.projects-title').innerHTML = projects_title['title'][hash]
