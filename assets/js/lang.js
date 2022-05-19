@@ -145,4 +145,11 @@ console.log(btn);
          e.innerHTML = faqContentP[value]
       }
    })
+   let faqList = faq_list[hash];
+   document.querySelectorAll('.faq-list').forEach( e=> {
+      let value = e.innerHTML;
+      if(value in faqList){
+         e.innerHTML = faqList[value]
+      }
+   })
 })();
