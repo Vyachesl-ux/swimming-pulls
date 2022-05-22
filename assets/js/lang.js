@@ -2,7 +2,8 @@ let lang = document.querySelector(".lang");
 let select = document.querySelector(".sub-menu");
 let changeItem = document.querySelector(".change-lang");
 const allLang = ["ru", "ukr"];
-lang.addEventListener("click", () => {
+lang.addEventListener("click", (e) => {
+   e.preventDefault();
    select.classList.toggle("isOpen");
 });
 
