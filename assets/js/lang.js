@@ -47,6 +47,13 @@ function changeLang(event) {
          e.innerHTML = mainMenu[value];
       }
    })
+   let footerMenu = menu_footer[hash];
+   document.querySelectorAll('.nav-items__link-item').forEach(e => {
+      let value = e.innerHTML;
+      if (value in footerMenu) {
+         e.innerHTML = footerMenu[value];
+      }
+   })
    // main header 
 
    document.querySelector('.main-header').innerHTML = main_header["title"][hash];
@@ -165,4 +172,8 @@ console.log(btn);
          console.log(e.innerHTML);
       }
    })
+   document.querySelector('.form-title').innerHTML = form_title["title"][hash];
+   document.querySelector('.form-text').innerHTML = form_text["title"][hash];
+   document.querySelector('.contact-item__title').innerHTML = contact_title["title"][hash];
+   document.querySelector('.contact-item__text').innerHTML = contact_text["title"][hash];
 })();
