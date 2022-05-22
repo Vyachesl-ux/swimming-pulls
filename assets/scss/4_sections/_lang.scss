@@ -1,11 +1,14 @@
 .nav-items__link {
    &.lang {
+      padding: 16px 80px 16px 0 !important;
       position: relative;
-      padding: 10px 25px;
       border-radius: 10px;
       display: flex;
       // justify-content: center;
       z-index: 2;
+      @include tablet-v{
+         border-radius: 0;
+      }
       &::after{
          position: absolute;
          content: '';
@@ -16,10 +19,15 @@
          top: 50%;
          right: 0px;
          transform:  translateY(-50%) rotate(45deg);
+         @include tablet-v {
+            right: 60px;
+            border-bottom: 1px solid $black;
+            border-right: 1px solid $black;
+         }
       }
       .sub-menu{
          position: absolute;
-         transition: height, padding .3s;
+         transition: height, padding, top .3s;
          cursor: pointer;
          text-transform: uppercase;
          color: $white;
@@ -31,12 +39,26 @@
          border-bottom-left-radius: 10px;
          border-bottom-right-radius: 10px;
          padding: 0 25px;
+         @include tablet-v{
+            left: auto;
+            right: 0;
+            color: $black;
+            padding: 0 50px;
+            width: 100%;
+         }
          &__item{
                align-self: center;
          }
          &.isOpen{
             height: 100%;
             padding: 10px 25px;
+            @include tablet-v{
+               background: $white;
+               border-bottom-left-radius: 30px;
+               top: 40px;
+               padding: 10px 60px;
+
+            }
          }
       }
    }

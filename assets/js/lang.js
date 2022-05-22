@@ -152,4 +152,16 @@ console.log(btn);
          e.innerHTML = faqList[value]
       }
    })
+   //modal
+
+   let modal = modal_text[hash];
+   console.log(modal)
+   document.querySelectorAll('.modal-text').forEach( e => {
+      let value = e.innerHTML;
+      console.log(value);
+      if( value in modal){
+         e.innerHTML = modal[value];
+         console.log(e.innerHTML);
+      }
+   })
 })();

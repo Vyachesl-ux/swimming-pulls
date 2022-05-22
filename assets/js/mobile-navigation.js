@@ -1,5 +1,5 @@
 if (document.documentElement.clientWidth <= 768) {
-   let nav = document.querySelectorAll('.nav-items__link');
+   let nav = document.querySelectorAll('.nav-items__link:not(:last-child)');
    nav.forEach(e => {
       e.addEventListener('click', (event) => {
          if (event.type === 'click') {

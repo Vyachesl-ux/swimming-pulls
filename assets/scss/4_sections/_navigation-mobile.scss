@@ -62,7 +62,7 @@
         
         .nav-items__link {
           display: block;
-          padding: 16px 50px;
+          padding: 16px 60px 16px 0;
           text-align: right;
           &:last-child{
             border-top: 1px solid rgba($black, .5);
@@ -73,7 +73,7 @@
           }
           
         }
-        .nav-items__link:hover {
+        .nav-items__link:not(:last-child):hover {
           background-color: #cfd8dc;
         }
         #menu__toggle:checked ~ .menu__btn > span {
