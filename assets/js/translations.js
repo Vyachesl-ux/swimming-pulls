@@ -378,3 +378,10 @@ const contact_text = {
 
    }
 }
+const copyright = {
+   title: {
+      ru: 'Copyright © 2021. Все права защищены.',
+      ukr: "Copyright © 2021. Усі права захищені."
+
+   }
+}

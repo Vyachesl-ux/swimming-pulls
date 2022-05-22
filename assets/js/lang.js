@@ -176,4 +176,5 @@ console.log(btn);
    document.querySelector('.form-text').innerHTML = form_text["title"][hash];
    document.querySelector('.contact-item__title').innerHTML = contact_title["title"][hash];
    document.querySelector('.contact-item__text').innerHTML = contact_text["title"][hash];
+   document.querySelector('.copyright').innerHTML = copyright["title"][hash];
 })();
