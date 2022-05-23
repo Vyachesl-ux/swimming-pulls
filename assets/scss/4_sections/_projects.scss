@@ -61,19 +61,19 @@
             }
           }
         }
-        &:hover {
-          .projects-content__item-image--info{
-            transition: opacity 0.5s ease 0s;
-            opacity: 1;
-            &-description {
-              &:hover{
-                background: darken($gray, 10%);
-                transition: background .3s;
+        @include desktop-up{
+          &:hover {
+            .projects-content__item-image--info{
+              transition: opacity 0.5s ease 0s;
+              opacity: 1;
+              &-description {
+                &:hover{
+                  background: darken($gray, 10%);
+                  transition: background .3s;
+                }
               }
-            }
-         }
-
-          
+           }
+          }
         }
         &--num {
           position: absolute;
