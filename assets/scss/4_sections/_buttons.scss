@@ -47,7 +47,14 @@
     position: relative;
     vertical-align: middle;
     width: 48px;
-
+    @include phone-only{
+      height: 40px;
+      width: 40px;
+    }
+    @include small-phone-only{
+      height: 30px;
+      width: 30px;
+    }
     &:not(.no-click) {
       &:hover {
         @extend %symbol-btn-hover;
@@ -74,6 +81,9 @@
         top: 50%;
         transform: translate(-50%, -50%);
         width: 3px;
+        @include small-phone-only{
+          height: 20px;
+        }
       }
 
       &::after {
@@ -87,6 +97,9 @@
         top: 50%;
         transform: translate(-50%, -50%);
         width: 24px;
+        @include small-phone-only{
+          width: 20px;
+        }
       }
 
       &:hover {

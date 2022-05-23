@@ -3,7 +3,9 @@
   @include phone-only{
     margin-top: 400px;
   }
-
+  @include small-phone-only{
+    margin-top: 440px;
+  }
   &-content {
     &__item {
       display: flex;

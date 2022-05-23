@@ -12,10 +12,13 @@
     @include phone-only {
       width: 100%;
       position: relative;
-      top: 300px;
+      top: 330px;
       p {
         width: 100%;
       }
+    }
+    @include small-phone-only{
+      top: 380px;
     }
   }
 }

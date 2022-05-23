@@ -30,6 +30,9 @@
       width: 170vw;
       height: 170vw;
     }
+    @include small-phone-only{
+      height: 190vw;
+    }
   }
   &-content {
     position: relative;
