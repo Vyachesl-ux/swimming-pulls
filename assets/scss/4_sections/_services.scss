@@ -66,7 +66,9 @@
         &.show {
           max-height: 600px;
         }
-
+        .services-content__item-text{
+          cursor: pointer;
+        }
         .services-read-more {
           position: absolute;
           bottom: 0;

@@ -16,7 +16,6 @@ function changeLang(event) {
    } else {
       document.querySelector(".sub-menu__item").innerHTML = "UKR";
    }
-   console.log(changeItem.innerHTML);
    location.href = `${window.location.pathname
       }${"#"}${changeItem.innerHTML.toLowerCase()}`;
    location.reload();
@@ -65,7 +64,6 @@ function changeLang(event) {
    //buttons
 
 let btn = buttons[hash];
-console.log(btn);
    document.querySelectorAll('.btn-link').forEach( e => {
       let value = e.innerHTML;
       if(value in btn) {
@@ -79,7 +77,6 @@ console.log(btn);
    // service title
 
    let serviceTitle = service_title[hash];
-   console.log(serviceTitle);
    document.querySelectorAll('.services-content__item-title').forEach( e => {
       let value = e.innerHTML;
       if(value in serviceTitle){
@@ -91,10 +88,8 @@ console.log(btn);
 
    let serviceContent = service_content[hash];
    let serviceReadMore = document.querySelectorAll('.services-read-more');
-   console.log(serviceContent);
    document.querySelectorAll('.services-content__item-text').forEach( e=> {
       let value = e.innerHTML;
-      console.log(value);
       if(value in serviceContent){
          e.innerHTML = serviceContent[value];
       }
@@ -106,10 +101,8 @@ console.log(btn);
    document.querySelector('.projects-title').innerHTML = projects_title['title'][hash]
 
    let projectsTitleInfoHeader = projects_title_info_header[hash];
-   console.log(projectsTitleInfoHeader);
    document.querySelectorAll('.projects-content__item-image--info-header').forEach( e => {
       let value = e.innerHTML;
-      console.log(value);
       if(value in projectsTitleInfoHeader){
          e.innerHTML = projectsTitleInfoHeader[value]
       }
@@ -163,13 +156,10 @@ console.log(btn);
    //modal
 
    let modal = modal_text[hash];
-   console.log(modal)
    document.querySelectorAll('.modal-text').forEach( e => {
       let value = e.innerHTML;
-      console.log(value);
       if( value in modal){
          e.innerHTML = modal[value];
-         console.log(e.innerHTML);
       }
    })
    document.querySelector('.form-title').innerHTML = form_title["title"][hash];
