@@ -1,14 +1,29 @@
 let txt = document.querySelectorAll(".services-content__item-text");
 let btn = document.querySelectorAll(".services-read-more");
 let wrap = document.querySelectorAll(".services-content__item-wrapp");
-txt.forEach((e) => {
-  var string = e.innerHTML;
-  var description = getExcerpt(string, 310);
-  e.innerHTML = description.shortText;
-  // console.log(description.fullText);
-});
 
-// принимает строку и лимит после скольки знаков искать пробел и обрезать
+wrap.forEach(e => {
+  let elem = e.children[1];
+  
+  let string = e.children[1].innerHTML;
+  console.log(string);
+  if(!(e.classList.contains('show'))){
+    e.children[1].innerHTML = getExcerpt(string, 310).shortText;
+  } else {
+    e.children[1].innerHTML = getExcerpt(string, 310).fullText;
+  }
+
+  elem.addEventListener('click', () => {
+      e.classList.toggle('show');
+      if(e.classList.contains('show')) {
+        elem.innerHTML = getExcerpt(string, 310).fullText;
+      } else {
+        elem.innerHTML = getExcerpt(string, 310).shortText;
+      }
+  })
+})
+
+
 function getExcerpt(str, limit) {
   var fullText = str;
   var shortText = str;
@@ -17,10 +32,10 @@ function getExcerpt(str, limit) {
   let read = '';
   hash === 'ru' ? read = "<strong style='text-align: right; display: block;'>Читать далее</strong>" : read = "<strong style='text-align: right; display: block;'>Читати далi</strong>"
   shortText = shortText.substr(0, shortText.lastIndexOf(" ", limit)) + "..."+"<br>"+read;
+  fullText = fullText + "<br>"+"<strong style='text-align: right; display: block;'>Свернуть</strong>";
   var returnString = {
     fullText: fullText,
     shortText: shortText,
   };
   return returnString;
 }
-// функция возвратит объект , свойство shortText короткое описание обрезанное по limit и пробелу fullText полный текст
