@@ -45,23 +45,23 @@
       &-wrapp {
         width: 40%;
         position: relative;
-        transition: max-height 0.5s;
+        transition: all 0.5s;
         padding: 30px 30px 0;
         overflow: hidden;
+        max-height: 320px;
         @include desktop-up{
-          max-height: 309px;
           margin: 0 0 30px 0;
           overflow: hidden;
 
         }
-        @include tablet-l-only {
-          max-height: 250px;
-          margin: 0 0 30px 0;
+        // @include tablet-l-only {
+        //   max-height: 310px;
+        //   margin: 0 0 30px 0;
 
-        }
-        @include tablet-v {
-          max-height: 190px;
-        }
+        // }
+        // @include tablet-v {
+        //   max-height: 310px;
+        // }
 
         &.show {
           max-height: 600px;
