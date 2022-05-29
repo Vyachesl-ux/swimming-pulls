@@ -1,9 +1,9 @@
 .services {
   background: $lightblue;
-  @include phone-only{
+  @include phone-only {
     margin-top: 400px;
   }
-  @include small-phone-only{
+  @include small-phone-only {
     margin-top: 440px;
   }
   &-content {
@@ -11,22 +11,21 @@
       display: flex;
       @include tablet-v {
         flex-wrap: wrap;
-        .services-content__item-wrapp{
+        .services-content__item-wrapp {
           width: 95%;
         }
-        .services-content__item-image{
+        .services-content__item-image {
           width: 100%;
           margin-left: 30px;
         }
-        .services-content__item-num{
+        .services-content__item-num {
           padding: 30px 0;
         }
-
       }
-      @include phone-only{
+      @include phone-only {
         .services-content__item-wrapp,
         .services-content__item-num,
-        .services-content__item-image{
+        .services-content__item-image {
           width: 100%;
           padding: 0;
           margin: 0 0 30px 0;
@@ -43,30 +42,22 @@
       }
 
       &-wrapp {
-        width: 40%;
+        width: 50%;
         position: relative;
         transition: all 0.5s;
         padding: 30px 30px 0;
         overflow: hidden;
-        max-height: 320px;
-        @include desktop-up{
+        max-height: 280px;
+
+        @include desktop-up {
           margin: 0 0 30px 0;
           overflow: hidden;
-
         }
-        // @include tablet-l-only {
-        //   max-height: 310px;
-        //   margin: 0 0 30px 0;
-
-        // }
-        // @include tablet-v {
-        //   max-height: 310px;
-        // }
 
         &.show {
           max-height: 600px;
         }
-        .services-content__item-text{
+        .services-content__item-text {
           cursor: pointer;
         }
         .services-read-more {
@@ -83,7 +74,14 @@
           margin: 0 0 30px 0;
         }
       }
-
+      &:first-child{
+        .services-content__item-wrapp{
+          max-height: 285px;
+          &.show{
+            max-height: 600px;
+          }
+        }
+      }
       &-image {
         width: 55%;
 

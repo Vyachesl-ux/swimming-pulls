@@ -8,7 +8,6 @@ wrap.forEach((e) => {
   let string = e.children[1].innerHTML;
   console.log(string);
   if (!e.classList.contains("show")) {
-
     e.children[1].innerHTML = getExcerpt(string, 300).shortText;
   } else {
     e.children[1].innerHTML = getExcerpt(string, 300).fullText;
@@ -42,10 +41,17 @@ function getExcerpt(str, limit) {
     "..." +
     "<br>" +
     read;
-  fullText =
-    fullText +
-    "<br>" +
-    "<strong style='text-align: right; display: block;'>Свернуть</strong>";
+  if (hash === "ru") {
+    fullText =
+      fullText +
+      "<br>" +
+      "<strong style='text-align: right; display: block;'>Свернуть</strong>";
+  } else {
+    fullText =
+      fullText +
+      "<br>" +
+      "<strong style='text-align: right; display: block;'>Згорнути</strong>";
+  }
   var returnString = {
     fullText: fullText,
     shortText: shortText,
