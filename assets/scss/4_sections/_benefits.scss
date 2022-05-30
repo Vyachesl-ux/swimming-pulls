@@ -40,6 +40,7 @@
       .benefits-content__item {
         text-align: center;
         padding: 0 90px;
+        position: relative;
         &:not(:nth-child(1)) {
           border-left: 1px solid rgba(255, 255, 255, 0.7);
           @include phone-only{
@@ -53,6 +54,21 @@
         }
         &--text {
           opacity: 0.7;
+          &:nth-child(1){
+            margin: 0 0 10px 0;
+          }
+        }
+        @include phone-only {
+          &:not(:nth-child(3))::after {
+            position: absolute;
+            content: '';
+            width: 30%;
+            height: 2px;
+            bottom: 15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba($color: $white, $alpha: .5);
+          }
         }
       }
       @include tablet-v {
