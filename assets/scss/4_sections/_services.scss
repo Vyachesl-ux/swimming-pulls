@@ -119,24 +119,24 @@
           @include tablet {
             max-height: 393px;
           }
-          @include galaxys{
-            max-height: 394px;
-          }
-          @include iphone5{
-            max-height: 285px;
-          }
           @include tablet-v{
             max-height: 261px ;
           }
           @include phone-only {
             max-height: 300px;
           }
-
+          
           @include iphone-pro{
             max-height: 350px;
           }
           @include small-phone-only {
             max-height: 370px;
+          }
+          @include galaxys{
+            max-height: 394px;
+          }
+          @include iphone5{
+            max-height: 285px;
           }
           &.show{
             max-height: 600px;
