@@ -84,6 +84,9 @@
           opacity: 0.25;
           color: $white;
           font-weight: 300;
+          @include tablet-v{
+            display: none;
+          }
         }
       }
       &:last-child {
