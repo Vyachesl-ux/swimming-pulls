@@ -9,9 +9,12 @@
  */
 
 img {
-  height: auto;
+  height: 100%;
   width: 100%;
   max-width: 768px;
+  object-fit: cover;
+  //height: auto;
+  //delete object-fit для того чтобы убрать эффект наезжания фото
   @include tablet-v{
     max-height: 390px;
   }

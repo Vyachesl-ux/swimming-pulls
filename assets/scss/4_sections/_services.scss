@@ -1,5 +1,10 @@
 .services {
   background: $lightblue;
+  &-title{
+    @include phone-only {
+      font-weight: 700;
+    }
+  }
   @include phone-only {
     margin-top: 400px;
   }
@@ -9,6 +14,16 @@
   &-content {
     &__item {
       display: flex;
+      &:nth-child(1){
+        @include tablet {
+          justify-content: center;
+          align-items: flex-end;
+        }
+        @include tablet-v {
+          justify-content: left;
+          align-items: flex-end;
+        }
+      }
       @include tablet-v {
         flex-wrap: wrap;
         .services-content__item-wrapp {
@@ -17,6 +32,9 @@
         .services-content__item-image {
           width: 100%;
           margin-left: 30px;
+          @include tablet {
+            margin-left: 0;
+          }
         }
         .services-content__item-num {
           padding: 30px 0;
@@ -28,7 +46,7 @@
         .services-content__item-image {
           width: 100%;
           padding: 0;
-          margin: 0 0 30px 0;
+          margin: 0 0 50px 0;
         }
       }
       &-num,
@@ -42,23 +60,44 @@
       }
 
       &-wrapp {
-        width: 50%;
+        width: 47%;
         position: relative;
         transition: all 0.5s;
         padding: 30px 30px 0;
         overflow: hidden;
-        max-height: 280px;
-
+        max-height: 250px;
+        @include iphone5 {
+          max-height: 230px;
+        }
+        @include tablet {
+          max-height: 287px;
+        }
+        @include tablet-v {
+          max-height:  229px;
+        }
+        @include phone-only {
+          max-height: 300px;
+        }
+        @include iphone-pro {
+          max-height: 297px;
+        }
+        @include small-phone-only {
+          max-height: 320px;
+        }
         @include desktop-up {
           margin: 0 0 30px 0;
           overflow: hidden;
         }
-
+        
         &.show {
-          max-height: 600px;
+          max-height: 650px;
         }
         .services-content__item-text {
           cursor: pointer;
+          margin-bottom: 0;
+          @include phone-only {
+            line-height: 1.5;
+          }
         }
         .services-read-more {
           position: absolute;
@@ -77,14 +116,63 @@
       &:first-child{
         .services-content__item-wrapp{
           max-height: 285px;
+          @include tablet {
+            max-height: 393px;
+          }
+          @include galaxys{
+            max-height: 394px;
+          }
+          @include iphone5{
+            max-height: 285px;
+          }
+          @include tablet-v{
+            max-height: 261px ;
+          }
+          @include phone-only {
+            max-height: 300px;
+          }
+
+          @include iphone-pro{
+            max-height: 350px;
+          }
+          @include small-phone-only {
+            max-height: 370px;
+          }
+          &.show{
+            max-height: 600px;
+          }
+        }
+      }
+      &:last-child{
+        .services-content__item-wrapp{
+          @include tablet {
+            max-height: 270px;
+          }
+          @include tablet-v{
+            max-height: 208px;
+          }
+          @include phone-only {
+            max-height: 300px;
+          }
+          @include small-phone-only{
+            max-height: 320px;
+          }
+          @include iphone5{
+            max-height: 230px;
+          }
+          @include iphone-pro {
+            max-height: 322px;
+          }
           &.show{
             max-height: 600px;
           }
         }
       }
       &-image {
-        width: 55%;
-
+        width: 53%;
+        @include phone-only {
+          min-height: 225px;
+        }
         img {
           overflow: hidden;
           border-radius: 10px;
