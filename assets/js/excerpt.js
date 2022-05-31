@@ -5,7 +5,6 @@ let wrap = document.querySelectorAll(".services-content__item-wrapp");
     let elem = e.children[1];
   
     let string = e.children[1].innerHTML;
-    console.log(string);
     if (!e.classList.contains("show")) {
       e.children[1].innerHTML = getExcerpt(string, 300).shortText;
     } else {
