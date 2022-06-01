@@ -30,17 +30,31 @@
      @content;
   }
 }
+@mixin custom-width2 {
+   @media only screen and (min-width: 361px) and (max-width: 369px) {
+      @content;
+   }
+}
 
 @mixin small-phone-only {
   @media only screen and (max-width: 375px) {
      @content;
   }
 }
-
+@mixin custom-width1 {
+   @media only screen and (min-width: 376px) and (max-width: 386px) {
+            @content;
+   }
+}
 @mixin iphone-pro {
   @media only screen and (max-width: 390px) {
      @content;
   }
+}
+@mixin custom-width3 {
+   @media only screen and (min-width: 391px) and (max-width: 397px){
+      @content;
+   }
 }
 
 @mixin iphonePlus {
