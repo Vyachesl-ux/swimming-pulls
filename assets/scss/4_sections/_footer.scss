@@ -17,6 +17,12 @@
       }
     }
     .main-footer__item {
+      @include tablet-p-up {
+        img{
+          transform: scale(1.5);
+        }
+
+      }
       &--social {
         filter: invert(1);
       }

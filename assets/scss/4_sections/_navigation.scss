@@ -9,12 +9,7 @@
 
   &-logo {
     margin-right: 170px;
-    @include phone-only{
-      margin-right: 0;
-      background: rgba($white, .5);
-      padding: 10px;
-      border-radius: 10px;
-    }
+    max-width: 70px;
   }
 
   &-items {

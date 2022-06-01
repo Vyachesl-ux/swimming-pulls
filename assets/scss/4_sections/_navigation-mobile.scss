@@ -5,6 +5,11 @@
         display: flex;
         align-items: center;
         width: 100%;
+        ul{
+          @include tablet-p-up{
+            margin-bottom: 0;
+          }
+        }
       }
       @include tablet-v {
         .hamburger-menu {
