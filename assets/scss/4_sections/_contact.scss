@@ -74,6 +74,16 @@
       &__header,
       &__content{
          border-bottom: 1px solid $primary;
+        }
+        &__header{
+          &-wrap{
+            display: flex;
+            .ukr-flag{
+              max-height: 40px;
+              width: auto;
+            }
+          }
+
       }
       &__telephone,
       &__email {

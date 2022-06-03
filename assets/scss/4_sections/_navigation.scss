@@ -10,6 +10,10 @@
   &-logo {
     margin-right: 170px;
     max-width: 70px;
+    display: flex;
+    .flag-animated{
+      max-height: 40px;
+    }
     @include phone-only{
       margin-right: 0;
       background: $white;
