@@ -43,8 +43,8 @@ const menu_footer = {
 };
 const main_header = {
   title: {
-    ru: "Cтроительство бассейнов<br><span> в Украине</span> ",
-    ukr: "Будівництво басейнів<br><span> в Україні</span> ",
+    ru: "строительство бассейнов <br><span>в украине</span>",
+    ukr: "будівництво басейнів <br><span>в Україні</span",
   },
 };
 const main_header_text = {
