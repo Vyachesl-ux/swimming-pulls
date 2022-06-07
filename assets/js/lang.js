@@ -175,7 +175,5 @@ let btn = buttons[hash];
       if(value in placeholder_cont){
          e.setAttribute('placeholder', placeholder_cont[value]);
       }
-      console.log(placeholder_cont);
-      console.log(value);
    })
 })();
