@@ -167,4 +167,15 @@ let btn = buttons[hash];
    document.querySelector('.contact-item__title').innerHTML = contact_title["title"][hash];
    document.querySelector('.contact-item__text').innerHTML = contact_text["title"][hash];
    document.querySelector('.copyright').innerHTML = copyright["title"][hash];
+
+   let placeholder_cont = placeholder[hash];
+   let inp = document.querySelectorAll('.form__input');
+   inp.forEach ( e => {
+      let value = e.getAttribute('placeholder');
+      if(value in placeholder_cont){
+         e.setAttribute('placeholder', placeholder_cont[value]);
+      }
+      console.log(placeholder_cont);
+      console.log(value);
+   })
 })();
