@@ -75,7 +75,7 @@ body {
 
 .widget-callback .callback-button-phone:before {
    content: '';
-   background: no-repeat url("../../../assets/images/icons/call.svg");
+   background: no-repeat url("assets/images/icons/call.svg");
    background-size: contain;
    position: absolute;
    display: block;
@@ -92,7 +92,7 @@ body {
 
 .widget-callback .callback-button-phone:after {
    content: '';
-   background: url('../../../assets/images/icons/cancel-button.png');
+   background: url('assets/images/icons/cancel-button.png');
    background-size: contain;
    position: absolute;
    display: block;
