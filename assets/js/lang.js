@@ -176,4 +176,9 @@ let btn = buttons[hash];
          e.setAttribute('placeholder', placeholder_cont[value]);
       }
    })
+
+   document.querySelector('.callback-button-title').innerHTML = widget["title"][hash];
+   document.querySelector('.callback-form-title').innerHTML = widget_heading["title"][hash];
+   document.querySelector('.callback-form__send').setAttribute('value', widget_send["title"][hash])
+
 })();
