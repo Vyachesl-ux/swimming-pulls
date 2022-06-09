@@ -31,6 +31,9 @@ body {
    color: #fff;
    padding: 6px 10px;
    border-radius: 3px;
+   @include phone-only{
+      display: none;
+   }
 }
 
 .widget-callback.widget-callback-form-open .callback-button-title {
