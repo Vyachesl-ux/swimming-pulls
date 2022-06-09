@@ -16,7 +16,7 @@
 </head>
 
 <body>
-   <div class="content">
+   <div class="content" id="up">
       <div class="content-wrapper">
          <header class="site-header">
             <div class="site-header__wrapper">
@@ -165,7 +165,7 @@
                   <div class="projects-content__item-image">
                      <img src="assets/images/projects/04.jpg" alt="">
                      <div class="projects-content__item-image--info">
-                        <h4 class="projects-content__item-image--info-header">индивидуальный бассейн</h4>
+                        <h4 class="projects-content__item-image--info-header">круглогодичный бассейн</h4>
                         <div class="projects-content__item-image--info-description" data-modal="modal_project_4">
                            Подробнее</div>
                      </div>
@@ -187,7 +187,7 @@
                   <div class="projects-content__item-image">
                      <img src="assets/images/projects/06.jpg" alt="">
                      <div class="projects-content__item-image--info">
-                        <h4 class="projects-content__item-image--info-header">круглогодичный индивидуальный бассейн</h4>
+                        <h4 class="projects-content__item-image--info-header">круглогодичный бассейн</h4>
                         <div class="projects-content__item-image--info-description" data-modal="modal_project_6">
                            Подробнее</div>
                      </div>
@@ -198,7 +198,7 @@
                   <div class="projects-content__item-image">
                      <img src="assets/images/projects/07.jpg" alt="">
                      <div class="projects-content__item-image--info">
-                        <h4 class="projects-content__item-image--info-header">сезонный общественный бассейн</h4>
+                        <h4 class="projects-content__item-image--info-header">сезонный бассейн</h4>
                         <div class="projects-content__item-image--info-description" data-modal="modal_project_7">
                            Подробнее</div>
                      </div>
@@ -220,7 +220,7 @@
             <div class="benefits-content">
                <div class="benefits-content__header">
                   <h2 class="benefits-content__title">в чем наше преимущество?</h2>
-                  <p class="benefits-content__text">Главным преимуществом нашей компании является её мобильность. <span>Мы работаем по всей Украине.</span> Также, в наших силах создать бассейн любой сложности и конструкции, обеспечивая клиентов <span>эстетикой и комфортом.</span> После сдачи бассейна, построенного нашей компанией под ключ предоставляется <span>месяц бесплатного обслуживания или комплектом химреагентов, необходимых аксессуаров.</span>
+                  <p class="benefits-content__text">Главным преимуществом нашей компании является её мобильность. <span>Мы работаем по всей Украине.</span> Также в наших силах создать бассейн любой сложности и конструкции, обеспечивая клиентов <span>эстетикой и комфортом.</span> После сдачи бассейна, построенного нашей компанией под ключ, предоставляется <span>месяц бесплатного обслуживания или комплек химреагентов или необходимых аксессуаров.</span>
                   </p>
                </div>
                <div class="benefits-content__wrapper">
@@ -412,6 +412,23 @@
          </div>
       </div>
    </section>
+   <!-- widget -->
+   <div class="widget-callback">
+      <div class="callback-button">
+         <span class="callback-button-title">Вам перезвонить?</span>
+         <span class="callback-button-phone"></span>
+      </div>
+      <div class="callback-form">
+         <form id="calbback-widget-form">
+            <span class="callback-form-title">Оставьте свой телефон и мы свяжемся с вами</span>
+            <input type="tel" name="wgphone" placeholder="+38 (068) 999 99 99" required >
+            <input type="hidden" name="wgdata" value="Обратный звонок">
+            <input type="hidden" name="wgpage" value="<?php echo 'https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]';?>">
+            <input type="submit" value="отправить">
+         </form>
+      </div>
+       </div>
+   <!-- /widget -->
    <!-- modal -->
    <div class="modal" id="modal_project_1">
       <div class="modal__dialog">
@@ -865,7 +882,8 @@
       <div class="container">
          <div class="main-footer__wrapper">
             <div class="main-footer__item">
-               <img src="assets/images/icons/logo_white.svg" alt="logo_white">
+               <a href="#up"><img src="assets/images/icons/logo_white.svg" alt="logo_white"></a>
+               
             </div>
             <div class="main-footer__item">
                <nav class="nav">
@@ -896,6 +914,7 @@
    </footer>
 
    </div>
+   <script src="assets/js/widget.js"></script>
    <script src="assets/js/faq-accordion.js"></script>
    <script src="assets/js/contact-form.js"></script>
    <script src="assets/node_modules/swiper/swiper-bundle.min.js"></script>
