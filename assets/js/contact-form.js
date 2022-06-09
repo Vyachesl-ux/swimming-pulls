@@ -62,7 +62,6 @@ document.addEventListener("DOMContentLoaded", function () {
     input.classList.remove("__error");
   }
 
-  //функция проверки email
   function emailTest(input) {
     return !/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/.test(
       input.value
