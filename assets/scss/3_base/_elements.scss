@@ -13,6 +13,7 @@ img {
   width: 100%;
   max-width: 768px;
   object-fit: cover;
+  aspect-ratio: attr(width) / attr(height);
   //height: auto;
   //delete object-fit для того чтобы убрать эффект наезжания фото
   @include tablet-v{
