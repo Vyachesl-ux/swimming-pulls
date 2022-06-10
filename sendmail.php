@@ -35,6 +35,6 @@ if (!$mail->send()) {
 } else {
    $message = "Ваша заявка отправлена";
 }
-$responce = ['message' => $message];
+$response = ['message' => $message];
 header('Content-type: application/json');
-echo json_encode($responce);
+echo json_encode($response);
