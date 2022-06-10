@@ -11,7 +11,7 @@ $mail->CharSet = 'UTF-8';
 $mail->setLanguage('ru', 'phpmailer/language/');
 $mail->isHTML(true);
 
-$mail->addAddress('vyacheslav.lobintsev@gmail.com', 'Vyacheslav Lobintsev');
+$mail->addAddress('pool4u.kh.ua@gmail.com', 'Maksim');
 $mail->Subject = 'Форма завки с сайта Pools4you';
 
 $body = '<h1>Форма заявки</h1>';

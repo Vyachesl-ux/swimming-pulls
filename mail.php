@@ -4,7 +4,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (isset($_POST['wgphone'])) {$wgphone = $_POST['wgphone'];}
     if (isset($_POST['wgdata'])) {$wgdata = $_POST['wgdata'];}
     if (isset($_POST['wgpage'])) {$wgpage = $_POST['wgpage'];}
-    $to = "up-lite@ya.ru"; /*Укажите адрес, на который должно приходить письмо*/
+    $to = "pool4u.kh.ua@gmail.com"; /*Укажите адрес, на который должно приходить письмо*/
     $headers = 'MIME-Version: 1.0' . "\r\n";
     $headers .= "Content-type: text/html; charset=utf-8 \r\n";
     // дополнительные данные
@@ -22,11 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div style='padding: 30px;border-radius: 0 0 10px 10px;background: #fff;'>
-
                     <b>Телефон:</b> <a href='tel:".$wgphone."'>".$wgphone." </a><br>
-
-                    <b>Страница:</b> ".$wgdata."
-
                 </div>
 
             </div>
@@ -39,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         {
         echo '
         <div class="success-send">
-            <img src="tick.svg"> <br> Мы получили Вашу заявку и скоро с Вами свяжемся!
+            <img src="assets/images/icons/tick.svg"> <br> Мы получили Вашу заявку и скоро с Вами свяжемся!
         </div>';
         }
         else

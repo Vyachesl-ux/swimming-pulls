@@ -15,7 +15,7 @@ jQuery("#calbback-widget-form").submit(function () {
                         var formNm = jQuery('#' + formID);
                         jQuery.ajax({
                         type: "POST",
-                         url: 'mail.php',
+                         url: '../../mail.php',
                          data: formNm.serialize(),
                          success: function (data) { 
                                 jQuery(formNm).html(data);
