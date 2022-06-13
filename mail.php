@@ -22,6 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
 
                 <div style='padding: 30px;border-radius: 0 0 10px 10px;background: #fff;'>
+                    <p>Перезвонить по номеру:</p><br>
                     <b>Телефон:</b> <a href='tel:".$wgphone."'>".$wgphone." </a><br>
                 </div>
 

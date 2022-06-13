@@ -24,18 +24,24 @@ function changeLang(event) {
    let hash = window.location.hash;
    hash = hash.substring(1);
    changeItem.innerHTML = hash.toUpperCase();
-   if (hash === "ukr") {
+   switch (hash) {
+      case "ukr":
       document.querySelector(".sub-menu__item").innerHTML = "RU";
-   } else {
-      null;
+      document.querySelector("title").innerHTML = langArr["title"]['ukr'];
+      break;
+
+      default:
+      document.querySelector("title").innerHTML = langArr["title"]['ru'];
+      break;
    }
+
+
    if (hash === "") changeItem.innerHTML = "ru".toUpperCase();
    if (!allLang.includes(hash)) {
       location.href = `${window.location.pathname}${"#ru"}`;
       changeItem.innerHTML = "RU";
    }
 
-   document.querySelector("title").innerHTML = langArr["title"][hash];
 
    // menu
 
@@ -63,7 +69,7 @@ function changeLang(event) {
 
    //buttons
 
-let btn = buttons[hash];
+   let btn = buttons[hash];
    document.querySelectorAll('.btn-link').forEach( e => {
       let value = e.innerHTML;
       if(value in btn) {

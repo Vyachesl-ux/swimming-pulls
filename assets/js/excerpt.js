@@ -52,16 +52,24 @@
     let hash = window.location.hash;
     hash = hash.substring(1);
     let read = "";
-    hash === "ru"
-      ? (read =
-          "<strong style='text-align: right; display: block;'>Читать далее</strong>")
-      : (read =
-          "<strong style='text-align: right; display: block;'>Читати далi</strong>");
-    shortText =
-      shortText.substr(0, shortText.lastIndexOf(" ", limit)) +
-      "..." +
-      "<br>" +
-      read;
+
+    switch (hash) {
+      case 'ru':
+        read = "<strong style='text-align: right; display: block;'>Читать далее</strong>"; 
+        break;
+      case '':
+        read = "<strong style='text-align: right; display: block;'>Читать далее</strong>"; 
+        break;
+      case 'ukr':
+        read = "<strong style='text-align: right; display: block;'>Читати далi</strong>";
+        break;
+      default:
+        read = "<strong style='text-align: right; display: block;'>Читать далее</strong>"; 
+        break;
+    }
+    
+    shortText = shortText.substr(0, shortText.lastIndexOf(" ", limit)) + ` ...<br>${read}`
+      
     if (hash === "ru") {
       fullText =
         fullText +

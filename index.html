@@ -15,7 +15,18 @@
    <link rel="stylesheet" href="style.css">
    <link rel="icon" type="image/png" href="assets/images/icons/logo_32_32.png">
    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script defer src="assets/js/lang.js"></script>
+   <script defer src="assets/js/excerpt.js"></script>
+   <script src="assets/js/translations.js"></script>
+   <!-- Global site tag (gtag.js) - Google Analytics -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6B6FEBS7GM"></script>
+   <script>
+   window.dataLayer = window.dataLayer || [];
+   function gtag(){dataLayer.push(arguments);}
+   gtag('js', new Date());
 
+   gtag('config', 'G-6B6FEBS7GM');
+   </script>
 </head>
 
 <body>
@@ -425,8 +436,7 @@
          <form id="calbback-widget-form">
             <span class="callback-form-title">Оставьте свой телефон и мы свяжемся с вами</span>
             <input type="tel" name="wgphone" placeholder="+38 (068) 999 99 99" required >
-            <!-- <input type="hidden" name="wgdata" value="Обратный звонок"> -->
-            <!-- <input type="hidden" name="wgpage" value=""> -->
+            <input type="hidden" name="wgdata" value="Заявка на обратный звонок">
             <input class="callback-form__send" type="submit" value="отправить">
          </form>
       </div>
@@ -924,9 +934,6 @@
    <script src="assets/js/swiper-initialize.js"></script>
    <script src="assets/js/modal.js"></script>
    <script src="assets/js/mobile-navigation.js"></script>
-   <script src="assets/js/translations.js"></script>
-   <script src="assets/js/lang.js"></script>
-   <script src="assets/js/excerpt.js"></script>
 </body>
 
 </html>
