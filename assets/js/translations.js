@@ -471,8 +471,8 @@ const contact_text = {
 };
 const copyright = {
   title: {
-    ru: "Copyright © 2021. Все права защищены.",
-    ukr: "Copyright © 2021. Усі права захищені.",
+    ru: "Copyright © 2023. Все права защищены.",
+    ukr: "Copyright © 2023. Усі права захищені.",
   },
 };
 const placeholder = {
