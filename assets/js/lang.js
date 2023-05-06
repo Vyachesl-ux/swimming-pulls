@@ -16,14 +16,17 @@ function changeLang(event) {
    } else {
       document.querySelector(".sub-menu__item").innerHTML = "UKR";
    }
-   location.href = `${window.location.pathname
-      }${"#"}${changeItem.innerHTML.toLowerCase()}`;
+   location.href = `${window.location.pathname}${"#"}${changeItem.innerHTML.toLowerCase()}`;
+      
    location.reload();
+   
 }
 (function changeLanguage(event) {
    let hash = window.location.hash;
+   console.log(window.location.hash)
    hash = hash.substring(1);
    changeItem.innerHTML = hash.toUpperCase();
+   
    switch (hash) {
       case "ukr":
       document.querySelector(".sub-menu__item").innerHTML = "RU";
@@ -36,11 +39,13 @@ function changeLang(event) {
    }
 
 
-   if (hash === "") changeItem.innerHTML = "ru".toUpperCase();
-   if (!allLang.includes(hash)) {
-      location.href = `${window.location.pathname}${"#ru"}`;
-      changeItem.innerHTML = "RU";
-   }
+      if (hash === "") changeItem.innerHTML = "ukr".toUpperCase();
+      if (!allLang.includes(hash)) {
+         location.href = `${window.location.pathname}${"#ukr"}`;
+         changeItem.innerHTML = "UKR";
+         location.reload()
+      }
+
 
 
    // menu
